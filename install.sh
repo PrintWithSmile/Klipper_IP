@@ -21,13 +21,6 @@ link_extension()
     ln -sf "${SRCDIR}/network_status.py" "${KLIPPER_PATH}/klippy/extras/network_status.py"
 }
 
-# Step 4: restarting Klipper
-restart_klipper()
-{
-    echo "Restarting Klipper..."
-    sudo systemctl restart klipper
-}
-
 # Helper functions
 verify_ready()
 {
@@ -53,5 +46,4 @@ done
 # Run steps
 verify_ready
 link_extension
-restart_klipper
 
